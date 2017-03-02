@@ -1,0 +1,110 @@
+<?php/*声明assign函数渲染的变量*/?><?php/*声明assign函数渲染的变量*/?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>管理中心</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://www.aaa.com/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="http://www.aaa.com/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="http://www.aaa.com/Public/datepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="http://www.aaa.com/Public/datepicker/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/datepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/datepicker/datepicker_zh-cn.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+</head>
+<body>
+<h1>
+    <span class="action-span"><a href="http://www.aaa.com/Admin/Admin/add.html">添加管理员</a></span>
+    <span class="action-span1"><a href="#">管理中心</a></span>
+    <span id="search_id" class="action-span1"> - 管理员列表 </span>
+    <div style="clear:both"></div>
+</h1><!-- 搜索 -->
+<div class="form-div search_form_div">
+    <form method="GET" name="search_form">
+		<p>
+			账号：
+	   		<input type="text" name="username" size="30" value="" />
+		</p>
+		<p>
+			是否启用：
+			<input type="radio" value="-1" name="is_use" checked="checked" /> 全部 
+			<input type="radio" value="1" name="is_use" checked="checked" /> 启用 
+			<input type="radio" value="0" name="is_use" checked="checked" /> 禁用 
+		</p>
+		<p><input type="submit" value=" 搜索 " class="button" /></p>
+    </form>
+</div>
+<!-- 列表 -->
+<div class="list-div" id="listDiv">
+	<table cellpadding="3" cellspacing="1">
+    	<tr>
+            <th >账号</th>
+            <th width="70">是否启用</th>
+			<th width="60">操作</th>
+        </tr>
+		            
+			<tr class="tron">
+				<td>root</td>
+				<td style="cursor:pointer;" admin_id="1" class="is_use">启用</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Admin/edit.html?id=1" title="编辑">编辑</a>
+	                <a href="http://www.aaa.com/Admin/Admin/del.html?id=1" onclick="return confirm('确定要删除吗？');" title="移除" style="display:none">移除</a> 
+	                
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>admin</td>
+				<td style="cursor:pointer;" admin_id="7" class="is_use">启用</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Admin/edit.html?id=7" title="编辑">编辑</a>
+	                <a href="http://www.aaa.com/Admin/Admin/del.html?id=7" onclick="return confirm('确定要删除吗？');" title="移除" style="">移除</a> 
+	                
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>abc</td>
+				<td style="cursor:pointer;" admin_id="8" class="is_use">启用</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Admin/edit.html?id=8" title="编辑">编辑</a>
+	                <a href="http://www.aaa.com/Admin/Admin/del.html?id=8" onclick="return confirm('确定要删除吗？');" title="移除" style="">移除</a> 
+	                
+		        </td>
+	        </tr>
+        	</table>
+</div>
+<script>
+// 为启用的td加一个事件
+$(".is_use").click(function(){
+	// 先获取点击的记录的ID
+	var id = $(this).attr("admin_id");
+	if(id == 1)
+	{
+		alert("超级管理员不能修改！");
+		return false;
+	}
+	var _this = $(this);
+	$.ajax({
+		type : "GET",
+		// 默认U函数生成的地址是带.html后缀的：/index.php/Admin/Admin/ajaxUpdateIsuse.html/id/3，这样请求这个地址会报错无法请求，所以需要让U生成的地址不要带.html后缀
+		// 也就是说，如果在AJAX时使用了U函数并且后面还要再传参数就需要设置第三个参数为FALSE不生成.html后缀
+		url : "",
+		success : function(data)
+		{
+			if(data == 0)
+				_this.html("禁用");
+			else
+				_this.html("启用");
+		}
+	});
+});
+</script>
+<?php/*声明assign函数渲染的变量*/?><div id="footer">yxy</div>
+</body>
+</html>
+
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/Admin/Js/tron.js"></script>

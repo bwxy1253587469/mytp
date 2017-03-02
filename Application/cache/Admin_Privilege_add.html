@@ -1,0 +1,120 @@
+<?php/*声明assign函数渲染的变量*/?><?php/*声明assign函数渲染的变量*/?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>管理中心</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://localhost/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost/Public/datepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="http://localhost/Public/datepicker/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://localhost/Public/datepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://localhost/Public/datepicker/datepicker_zh-cn.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://localhost/Public/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://localhost/Public/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="http://localhost/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+</head>
+<body>
+<h1>
+    <span class="action-span"><a href="http://localhost/Admin/Privilege/lst.html">权限列表</a></span>
+    <span class="action-span1"><a href="#">管理中心</a></span>
+    <span id="search_id" class="action-span1"> - 添加权限 </span>
+    <div style="clear:both"></div>
+</h1><div class="main-div">
+    <form name="main_form" method="POST" action="/Admin/Privilege/add.html" enctype="multipart/form-data">
+        <table cellspacing="1" cellpadding="3" width="100%">
+			<tr>
+				<td class="label">上级权限：</td>
+				<td>
+					<select name="parent_id">
+						<option value="0">顶级权限</option>
+												<option value="3">商品管理</option>
+												<option value="1">--------商品列表</option>
+												<option value="2">----------------添加商品</option>
+												<option value="4">----------------修改商品</option>
+												<option value="46">------------------------ajax删除图片</option>
+												<option value="47">------------------------ajax删除商品属性</option>
+												<option value="36">----------------ajax获取商品属性</option>
+												<option value="48">----------------放入回收站</option>
+												<option value="50">----------------还原</option>
+												<option value="51">----------------库存</option>
+												<option value="6">--------商品分类列表</option>
+												<option value="7">----------------添加分类</option>
+												<option value="8">----------------修改分类</option>
+												<option value="9">----------------删除分类</option>
+												<option value="24">--------类型列表</option>
+												<option value="25">----------------添加类型</option>
+												<option value="26">----------------修改类型</option>
+												<option value="27">----------------删除类型</option>
+												<option value="28">----------------属性列表</option>
+												<option value="29">------------------------添加属性</option>
+												<option value="30">------------------------修改属性</option>
+												<option value="31">------------------------删除属性</option>
+												<option value="37">--------品牌列表</option>
+												<option value="38">----------------添加品牌</option>
+												<option value="39">----------------修改品牌</option>
+												<option value="40">----------------删除品牌</option>
+												<option value="49">--------商品回收站</option>
+												<option value="10">权限管理</option>
+												<option value="11">--------权限列表</option>
+												<option value="12">----------------添加权限</option>
+												<option value="13">----------------修改权限</option>
+												<option value="14">----------------删除权限</option>
+												<option value="15">--------角色列表</option>
+												<option value="16">----------------添加角色</option>
+												<option value="17">----------------修改角色</option>
+												<option value="18">----------------删除角色</option>
+												<option value="19">--------管理员列表</option>
+												<option value="20">----------------添加管理员</option>
+												<option value="21">----------------修改管理员</option>
+												<option value="22">----------------删除管理员</option>
+												<option value="23">----------------ajax修改状态</option>
+												<option value="41">会员管理</option>
+												<option value="42">--------会员级别列表</option>
+												<option value="43">----------------添加会员级别</option>
+												<option value="44">----------------修改会员级别</option>
+												<option value="45">----------------删除会员级别</option>
+											</select>
+				</td>
+			</tr>
+            <tr>
+                <td class="label">权限名称：</td>
+                <td>
+                    <input  type="text" name="pri_name" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">模块名称：</td>
+                <td>
+                    <input  type="text" name="module_name" value="" />     如admin，代表admin模块下的所有操作的权限
+                </td>
+            </tr>
+            <tr>
+                <td class="label">控制器名称：</td>
+                <td>
+                    <input  type="text" name="controller_name" value="" />    如goods，代表admin模块下的goods控制器下的所有操作的权限
+                </td>
+            </tr>
+            <tr>
+                <td class="label">方法名称：</td>
+                <td>
+                    <input  type="text" name="action_name" value="" />     如lst，代表admin模块下的goods控制器下的lst操作的权限
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script>
+</script>
+<?php/*声明assign函数渲染的变量*/?><div id="footer">yxy</div>
+</body>
+</html>
+
+<script type="text/javascript" charset="utf-8" src="http://localhost/Public/Admin/Js/tron.js"></script>

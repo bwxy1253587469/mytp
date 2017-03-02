@@ -1,0 +1,595 @@
+<?php/*声明assign函数渲染的变量*/?><?php/*声明assign函数渲染的变量*/?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>管理中心</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://www.aaa.com/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="http://www.aaa.com/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="http://www.aaa.com/Public/datepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="http://www.aaa.com/Public/datepicker/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/datepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/datepicker/datepicker_zh-cn.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+</head>
+<body>
+<h1>
+    <span class="action-span"><a href="http://www.aaa.com/Admin/Privilege/add.html">添加权限</a></span>
+    <span class="action-span1"><a href="#">管理中心</a></span>
+    <span id="search_id" class="action-span1"> - 权限列表 </span>
+    <div style="clear:both"></div>
+</h1><!-- 列表 -->
+<div class="list-div" id="listDiv">
+	<table cellpadding="3" cellspacing="1">
+    	<tr>
+            <th >权限名称</th>
+            <th >模块名称</th>
+            <th >控制器名称</th>
+            <th >方法名称</th>
+            <th >上级权限的ID，0：代表顶级权限</th>
+			<th width="60">操作</th>
+        </tr>
+		            
+			<tr class="tron">
+				<td>商品管理</td>
+				<td>null</td>
+				<td>null</td>
+				<td>null</td>
+				<td>0</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=3" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=3" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------商品列表</td>
+				<td>Admin</td>
+				<td>Goods</td>
+				<td>lst</td>
+				<td>3</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=1" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=1" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------添加商品</td>
+				<td>Admin</td>
+				<td>Goods</td>
+				<td>add</td>
+				<td>1</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=2" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=2" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------修改商品</td>
+				<td>Admin</td>
+				<td>Goods</td>
+				<td>edit</td>
+				<td>1</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=4" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=4" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>------------------------ajax删除图片</td>
+				<td>Admin</td>
+				<td>Goods</td>
+				<td>ajaxDelImage</td>
+				<td>4</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=46" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=46" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>------------------------ajax删除商品属性</td>
+				<td>Admin</td>
+				<td>Goods</td>
+				<td>ajaxDelGoodsAttr</td>
+				<td>4</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=47" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=47" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------ajax获取商品属性</td>
+				<td>Admin</td>
+				<td>Goods</td>
+				<td>ajaxGetAttr</td>
+				<td>1</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=36" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=36" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------放入回收站</td>
+				<td>Admin</td>
+				<td>Goods</td>
+				<td>recycle</td>
+				<td>1</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=48" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=48" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------还原</td>
+				<td>Admin</td>
+				<td>Goods</td>
+				<td>restore</td>
+				<td>1</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=50" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=50" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------库存</td>
+				<td>Admin</td>
+				<td>Goods</td>
+				<td>goods_number</td>
+				<td>1</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=51" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=51" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------商品分类列表</td>
+				<td>Admin</td>
+				<td>Category</td>
+				<td>lst</td>
+				<td>3</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=6" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=6" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------添加分类</td>
+				<td>Admin</td>
+				<td>Category</td>
+				<td>add</td>
+				<td>6</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=7" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=7" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------修改分类</td>
+				<td>Admin</td>
+				<td>Category</td>
+				<td>edit</td>
+				<td>6</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=8" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=8" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------删除分类</td>
+				<td>Admin</td>
+				<td>Category</td>
+				<td>del</td>
+				<td>6</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=9" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=9" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------类型列表</td>
+				<td>Admin</td>
+				<td>Type</td>
+				<td>lst</td>
+				<td>3</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=24" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=24" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------添加类型</td>
+				<td>Admin</td>
+				<td>Type</td>
+				<td>add</td>
+				<td>24</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=25" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=25" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------修改类型</td>
+				<td>Admin</td>
+				<td>Type</td>
+				<td>edit</td>
+				<td>24</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=26" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=26" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------删除类型</td>
+				<td>Admin</td>
+				<td>Type</td>
+				<td>del</td>
+				<td>24</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=27" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=27" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------属性列表</td>
+				<td>Admin</td>
+				<td>Attribute</td>
+				<td>lst</td>
+				<td>24</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=28" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=28" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>------------------------添加属性</td>
+				<td>Admin</td>
+				<td>Attribute</td>
+				<td>add</td>
+				<td>28</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=29" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=29" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>------------------------修改属性</td>
+				<td>Admin</td>
+				<td>Attribute</td>
+				<td>edit</td>
+				<td>28</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=30" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=30" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>------------------------删除属性</td>
+				<td>Admin</td>
+				<td>Attribute</td>
+				<td>del</td>
+				<td>28</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=31" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=31" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------品牌列表</td>
+				<td>Admin</td>
+				<td>Brand</td>
+				<td>lst</td>
+				<td>3</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=37" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=37" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------添加品牌</td>
+				<td>Admin</td>
+				<td>Brand</td>
+				<td>add</td>
+				<td>37</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=38" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=38" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------修改品牌</td>
+				<td>Admin</td>
+				<td>Brand</td>
+				<td>edit</td>
+				<td>37</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=39" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=39" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------删除品牌</td>
+				<td>Admin</td>
+				<td>Brand</td>
+				<td>del</td>
+				<td>37</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=40" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=40" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------商品回收站</td>
+				<td>Admin</td>
+				<td>Goods</td>
+				<td>recyclelst</td>
+				<td>3</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=49" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=49" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>权限管理</td>
+				<td>null</td>
+				<td>null</td>
+				<td>null</td>
+				<td>0</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=10" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=10" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------权限列表</td>
+				<td>Admin</td>
+				<td>Privilege</td>
+				<td>lst</td>
+				<td>10</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=11" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=11" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------添加权限</td>
+				<td>Admin</td>
+				<td>Privilege</td>
+				<td>add</td>
+				<td>11</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=12" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=12" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------修改权限</td>
+				<td>Admin</td>
+				<td>Privilege</td>
+				<td>edit</td>
+				<td>11</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=13" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=13" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------删除权限</td>
+				<td>Admin</td>
+				<td>Privilege</td>
+				<td>del</td>
+				<td>11</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=14" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=14" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------角色列表</td>
+				<td>Admin</td>
+				<td>Role</td>
+				<td>lst</td>
+				<td>10</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=15" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=15" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------添加角色</td>
+				<td>Admin</td>
+				<td>Role</td>
+				<td>add</td>
+				<td>15</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=16" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=16" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------修改角色</td>
+				<td>Admin</td>
+				<td>Role</td>
+				<td>edit</td>
+				<td>15</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=17" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=17" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------删除角色</td>
+				<td>Admin</td>
+				<td>Role</td>
+				<td>del</td>
+				<td>15</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=18" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=18" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------管理员列表</td>
+				<td>Admin</td>
+				<td>Admin</td>
+				<td>lst</td>
+				<td>10</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=19" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=19" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------添加管理员</td>
+				<td>Admin</td>
+				<td>Admin</td>
+				<td>add</td>
+				<td>19</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=20" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=20" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------修改管理员</td>
+				<td>Admin</td>
+				<td>Admin</td>
+				<td>edit</td>
+				<td>19</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=21" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=21" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------删除管理员</td>
+				<td>Admin</td>
+				<td>Admin</td>
+				<td>del</td>
+				<td>19</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=22" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=22" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------ajax修改状态</td>
+				<td>Admin</td>
+				<td>Admin</td>
+				<td>ajaxUpdateIsuse</td>
+				<td>19</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=23" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=23" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>会员管理</td>
+				<td>null</td>
+				<td>null</td>
+				<td>null</td>
+				<td>0</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=41" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=41" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------会员级别列表</td>
+				<td>Admin</td>
+				<td>MemberLevel</td>
+				<td>lst</td>
+				<td>41</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=42" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=42" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------添加会员级别</td>
+				<td>Admin</td>
+				<td>MemberLevel</td>
+				<td>add</td>
+				<td>42</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=43" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=43" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------修改会员级别</td>
+				<td>Admin</td>
+				<td>MemberLevel</td>
+				<td>edit</td>
+				<td>42</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=44" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=44" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------删除会员级别</td>
+				<td>Admin</td>
+				<td>MemberLevel</td>
+				<td>del</td>
+				<td>42</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Privilege/edit.html?id=45" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Privilege/del.html?id=45" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+        	</table>
+</div>
+<script>
+</script>
+<?php/*声明assign函数渲染的变量*/?><div id="footer">yxy</div>
+</body>
+</html>
+
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/Admin/Js/tron.js"></script>

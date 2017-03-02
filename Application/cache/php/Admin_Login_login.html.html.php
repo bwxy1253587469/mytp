@@ -1,0 +1,1 @@
+<?php/*声明assign函数渲染的变量*/?><?php $abc=$this->tpl_var["abc"];?>

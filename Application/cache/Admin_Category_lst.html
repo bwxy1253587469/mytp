@@ -1,0 +1,221 @@
+<?php/*声明assign函数渲染的变量*/?><?php/*声明assign函数渲染的变量*/?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>管理中心</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://www.aaa.com/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="http://www.aaa.com/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="http://www.aaa.com/Public/datepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="http://www.aaa.com/Public/datepicker/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/datepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/datepicker/datepicker_zh-cn.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+</head>
+<body>
+<h1>
+    <span class="action-span"><a href="http://www.aaa.com/Admin/Category/add.html">添加商品分类</a></span>
+    <span class="action-span1"><a href="#">管理中心</a></span>
+    <span id="search_id" class="action-span1"> - 商品分类列表 </span>
+    <div style="clear:both"></div>
+</h1><!-- 列表 -->
+<div class="list-div" id="listDiv">
+	<table cellpadding="3" cellspacing="1">
+    	<tr>
+            <th >分类名称</th>
+            <th >上级分类的ID，0：代表顶级</th>
+			<th width="60">操作</th>
+        </tr>
+		            
+			<tr class="tron">
+				<td>手机、数码</td>
+				<td>0</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=14" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=14" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------手机配件</td>
+				<td>14</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=22" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=22" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------蓝牙耳机</td>
+				<td>22</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=24" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=24" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------手机饰品</td>
+				<td>22</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=25" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=25" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------数码配件</td>
+				<td>14</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=23" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=23" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------存储卡</td>
+				<td>23</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=26" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=26" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------读卡器</td>
+				<td>23</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=27" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=27" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>家用电器</td>
+				<td>0</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=15" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=15" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------大家电</td>
+				<td>15</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=16" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=16" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------平板电视</td>
+				<td>16</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=19" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=19" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------空调</td>
+				<td>16</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=20" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=20" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------冰箱</td>
+				<td>16</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=21" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=21" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------生活电器</td>
+				<td>15</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=17" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=17" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------厨房电器</td>
+				<td>15</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=18" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=18" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>文化用品</td>
+				<td>0</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=28" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=28" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>--------书</td>
+				<td>28</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=29" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=29" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------php</td>
+				<td>29</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=30" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=30" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>----------------ios</td>
+				<td>29</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=31" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=31" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>测试商品分类属性</td>
+				<td>0</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=32" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=32" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+                    
+			<tr class="tron">
+				<td>新的分类</td>
+				<td>0</td>
+		        <td align="center">
+		        	<a href="http://www.aaa.com/Admin/Category/edit.html?id=33" title="编辑">编辑</a> |
+	                <a href="http://www.aaa.com/Admin/Category/del.html?id=33" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+         
+	</table>
+</div>
+<script>
+</script>
+<?php/*声明assign函数渲染的变量*/?><div id="footer">yxy</div>
+</body>
+</html>
+
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/Admin/Js/tron.js"></script>

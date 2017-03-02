@@ -1,0 +1,94 @@
+<?php/*声明assign函数渲染的变量*/?><?php/*声明assign函数渲染的变量*/?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>管理中心</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://www.aaa.com/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="http://www.aaa.com/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="http://www.aaa.com/Public/datepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="http://www.aaa.com/Public/datepicker/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/datepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/datepicker/datepicker_zh-cn.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+</head>
+<body>
+<h1>
+    <span class="action-span"><a href="http://www.aaa.com/Admin/Goods/lst.html">商品列表</a></span>
+    <span class="action-span1"><a href="#">管理中心</a></span>
+    <span id="search_id" class="action-span1"> - 商品库存 </span>
+    <div style="clear:both"></div>
+</h1><!-- 列表 -->
+<div class="list-div" id="listDiv">
+<form action="" method="POST">
+	<table cellpadding="3" cellspacing="1">
+    	<tr>
+    		    		<th>内存</th>
+    		    		<th>颜色</th>
+    		            <th width="80">库存</th>
+			<th width="30">操作</th>
+        </tr>
+				<input type="hidden" value="22" name="goods_id"/>
+						        <tr>
+		        																																																													<td>
+							<select name="goods_attr_id[0][]">
+							<option value="">请选择</option><option   value=56>白色</option><option selected=selected  value=55>黑色</option>								    		</select>
+		    		</td>
+		    																																																		<td>
+							<select name="goods_attr_id[0][]">
+							<option value="">请选择</option><option selected=selected  value=56>白色</option><option   value=55>黑色</option>																				    		</select>
+		    		</td>
+		    																										<td>
+							<select name="goods_attr_id[0][]">
+							<option value="">请选择</option><option   value=59>16G</option><option selected=selected  value=58>8G</option><option   value=57>4G</option>																																												    		</select>
+		    		</td>
+		    														<td>
+							<select name="goods_attr_id[0][]">
+							<option value="">请选择</option><option selected=selected  value=59>16G</option><option   value=58>8G</option><option   value=57>4G</option>																																																								    		</select>
+		    		</td>
+		    				            <td><input type="text" size="8" name="goods_number[0]" value="126" /></td>
+					<td><input type="button" onclick="addnew(this);" value="+" /></td>
+		        </tr>
+						        <tr>
+		        																																																	<td>
+							<select name="goods_attr_id[1][]">
+							<option value="">请选择</option><option selected=selected  value=56>白色</option><option   value=55>黑色</option>																				    		</select>
+		    		</td>
+		    																										<td>
+							<select name="goods_attr_id[1][]">
+							<option value="">请选择</option><option   value=59>16G</option><option selected=selected  value=58>8G</option><option   value=57>4G</option>																																												    		</select>
+		    		</td>
+		    				            <td><input type="text" size="8" name="goods_number[1]" value="444" /></td>
+					<td><input type="button" onclick="addnew(this);" value="-" /></td>
+		        </tr>
+					    	
+        <tr id="btn"><td colspan="4" align="center"><input type="submit" value="提交" /></td></tr>
+	</table>
+</form>
+</div>
+<script>
+function addnew(btn)
+{
+	// 先获取点击的按钮所在的tr
+	var tr = $(btn).parent().parent();
+	if($(btn).val() == "+")
+	{
+		// 克隆tr
+		var newtr = tr.clone();
+		// 把+变-
+		newtr.find(":button").val("-");
+		// 把到btn所在的TR前面
+		$("#btn").before(newtr);
+	}
+	else
+		tr.remove();
+}
+</script>
+<?php/*声明assign函数渲染的变量*/?><div id="footer">yxy</div>
+</body>
+</html>
+
+<script type="text/javascript" charset="utf-8" src="http://www.aaa.com/Public/Admin/Js/tron.js"></script>

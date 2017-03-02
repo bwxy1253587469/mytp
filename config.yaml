@@ -1,0 +1,4 @@
+name: myecshop2016
+version: 1
+handle: 
+- rewrite: if(!is_dir() && !is_file() && path ~ "([a-zA-Z]+)/([a-zA-Z]+)/([a-zA-Z_]+)\.html$") goto "index.php/$1/$2/$3"
